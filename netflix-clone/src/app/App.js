@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
+// import logo from "../logo.svg";
 import React from "react";
 import "./App.css";
-import Row from "./Row";
-import request from "./requests";
+import Row from "../components/Row/Row";
+import request from "../core/requests";
 
 function App() {
     return (
