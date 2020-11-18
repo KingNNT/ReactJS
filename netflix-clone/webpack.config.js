@@ -7,12 +7,14 @@ const devMode = false;
 module.exports = {
     mode: devMode ? "development" : "production",
     entry: [
-        "./src/scss/row.scss", // file nguồn  CSS
+        "./src/scss/index.scss",
+        "./src/scss/row.scss",
+        "./src/scss/App.scss",
     ],
 
     output: {
-        filename: "app.min.js",
-        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.min.js.txt",
+        path: path.resolve(__dirname, "src/dist"),
         library: "mylib",
         libraryTarget: "var",
     },
@@ -52,22 +54,6 @@ module.exports = {
                     },
                     {
                         loader: "sass-loader",
-                    },
-                ],
-            },
-            {
-                // Thiết lập lưu các ảnh sử dụng bởi CSS
-                // lưu dưới đường dẫn images cùng file site.css
-                test: /\.(png|jpe?g|gif)$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            // Image sử dụng bởi CSS lưu tại
-                            publicPath: "../images",
-                            emitFile: false,
-                        },
                     },
                 ],
             },
