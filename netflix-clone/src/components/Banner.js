@@ -29,7 +29,7 @@ function Banner() {
             className="banner"
             style={{
                 backgroundImage: `url("${base_url}${
-                    movie?.backdrop_path || movie.poster_path
+                    movie?.backdrop_path || movie?.poster_path
                 }")`,
             }}
         >

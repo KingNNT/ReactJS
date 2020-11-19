@@ -3,6 +3,7 @@
     background-position: center center;
 
     color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px #000000;
     object-fit: contain;
     height: 448px;
 
@@ -40,5 +41,11 @@
         padding-top: 0.5rem;
         margin-right: 1rem;
         background-color: rgba(51, 51, 51, 0.5);
+
+        &:hover {
+            color: #000000;
+            background-color: #e6e6e6;
+            transition: all 0.2s;
+        }
     }
 }
