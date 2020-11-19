@@ -67,4 +67,9 @@ module.exports = {
             filename: devMode ? "css/site.css" : "css/site.min.css",
         }),
     ],
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 200,
+        poll: 1000,
+    },
 };
