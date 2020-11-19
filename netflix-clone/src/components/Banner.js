@@ -19,26 +19,25 @@ function Banner() {
         }
         fetchData();
     }, []);
-    console.log(movie);
 
     return (
         <header
             className="banner"
             style={{
-                backgroundImage: `url (
-                "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
-            )`,
+                backgroundImage: `url("${base_url}${
+                    movie?.backdrop_path || movie.poster_path
+                }")`,
             }}
         >
             <div className="banner__contents">
-                <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+                <h1 className="banner__title">
+                    {movie?.title || movie?.name || movie?.original_name}
+                </h1>
                 <div className="banner__buttons">
                     <button className="banner__button">Play</button>
                     <button className="banner__button">My List</button>
                 </div>
-                <h1 className="banner__description">
-                    {movie?.overview}
-                </h1>
+                <h1 className="banner__description">{movie?.overview}</h1>
             </div>
         </header>
     );
