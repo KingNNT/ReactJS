@@ -1,15 +1,17 @@
 // import logo from "../logo.svg";
 import React from "react";
-import Row from "../components/Row";
 import request from "../core/requests";
+import Row from "../components/Row";
+import Banner from "../components/Banner";
 
 function App() {
     return (
         <div className="App">
-            <h1>Netflix Clone</h1>
+            <Banner />
             <Row
                 title="NETFLIX ORIGINALS"
                 fetchUrl={request.fetchNetflixOriginals}
+                isLargeRow={true}
             />
             <Row title="Trending Now" fetchUrl={request.fetchTrending} />
             <Row title="Top Rated" fetchUrl={request.fetchTopRated} />

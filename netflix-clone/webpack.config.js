@@ -8,7 +8,8 @@ module.exports = {
     mode: devMode ? "development" : "production",
     entry: [
         "./src/scss/index.scss",
-        "./src/scss/row.scss",
+        "./src/scss/Row.scss",
+        "./src/scss/Banner.scss",
         "./src/scss/App.scss",
     ],
 
