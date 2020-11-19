@@ -19,7 +19,6 @@ function Nav() {
     return (
         <div className={`nav ${show && "nav__black"}`}>
             <img className="nav__logo" src={logo} alt="logo" />
-
             <img className="nav__avatar" src={avatar} alt="user_avatar" />
         </div>
     );
