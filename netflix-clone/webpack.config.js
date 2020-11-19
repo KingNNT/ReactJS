@@ -7,10 +7,11 @@ const devMode = false;
 module.exports = {
     mode: devMode ? "development" : "production",
     entry: [
-        "./src/scss/index.scss",
-        "./src/scss/Row.scss",
-        "./src/scss/Banner.scss",
         "./src/scss/App.scss",
+        "./src/scss/Banner.scss",
+        "./src/scss/index.scss",
+        "./src/scss/Nav.scss",
+        "./src/scss/Row.scss",
     ],
 
     output: {
